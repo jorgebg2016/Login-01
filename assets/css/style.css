@@ -1,0 +1,206 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.bb {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 80vh;
+    min-height: 470px;
+    max-height: 500px;
+    width: 30vw;
+    min-width: 370px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 10px 10px 20px #DCDCDC;
+    border-radius: 3px;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header > span {
+    font-family: "Consolas";
+    font-size: 22px;
+    font-weight: 500;
+    color: #A9A9A9;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.card-body > input {
+    width: 100%;
+    margin: 20px;
+    height: 50px;
+    border: 2px solid #DCDCDC;
+    outline: none;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #A9A9A9;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Consolas";
+    letter-spacing: 1px;
+}
+
+.card-body > input::placeholder {
+    font-family: "Consolas";
+    letter-spacing: 1px;
+    color: #A9A9A9;
+}
+
+.card-body > button {
+    width: 100%;
+    margin: 20px;
+    height: 50px;
+    border: none;
+    background-color: RoyalBlue;
+    border-radius: 3px;
+    font-family: "Consolas";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: whitesmoke;
+    box-shadow: 5px 5px 10px #DCDCDC;
+}
+
+.card-body > button:hover {
+    background-color: rgb(91, 124, 224);
+    cursor: pointer;
+}
+
+.card-body > .additional {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card-body > .additional > div {
+    display: flex;
+}
+
+@media only screen and (max-width: 370px) {
+    .card-body > .additional {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .card-body > .additional {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.card-body > .additional > div > label {
+    color: RoyalBlue;
+    font-family: "Consolas";
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+.card-body > .additional > div > label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card-body > .additional > a {
+    font-family: "Consolas";
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: RoyalBlue;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.card-body > .additional > a:hover {
+    text-decoration: underline;
+}
+
+
+.card-body > .additional > div > input:before {
+    content: "";
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    top: 0;
+    left: 0;
+    border: 2px solid #DCDCDC;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.card-body > .additional > div > input:checked:before {
+    content: "";
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    top: 0;
+    left: 0;
+    border: 2px solid RoyalBlue;
+    border-radius: 3px;
+    background-color: RoyalBlue;
+}
+
+
+.card-body > .additional > div > input:checked:after {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border: 2px solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+    cursor: pointer;
+    top: -15px;
+    left: 4px;
+}
